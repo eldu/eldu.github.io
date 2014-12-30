@@ -1,4 +1,4 @@
-.DocumentList
+.HList
 {
     overflow-x:scroll;
     overflow-y:hidden;
@@ -8,11 +8,11 @@
     position: relative;
 }
 
-.row {
+.Hrow {
     width: 500%;
 }
 
-.DocumentItem
+.HDocumentItem
 {
     border:1px solid black;
     padding:0;
