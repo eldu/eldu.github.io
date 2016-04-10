@@ -114,28 +114,28 @@ var Editor = function () {
 
 	var geometry = new THREE.Geometry();
 	geometry.vertices.push(
-		new THREE.Vector3( 0, -10, 0 ),
-		new THREE.Vector3( 0, 10, 0 )
+		new THREE.Vector3( 0, 0, 10 ),
+		new THREE.Vector3( 0, 0, -10 )
 	);
 
 	var line = new THREE.Line( geometry, material );
 	this.scene.add( line );
 
-
-
-	var radiusTop = 8;
-	var radiusBottom = 8;
-	var height = 20;
+	var radiusTop = 3;
+	var radiusBottom = 3;
+	var height = 8;
 	var radiusSegments = 32;
 	var heightSegments = 1;
 	var openEnded = false;
 
 	geometry = new THREE.CylinderGeometry( radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded );
 	var mesh = new THREE.Mesh( geometry, new THREE.MeshStandardMaterial() );
+	mesh.rotation.x = Math.PI / 2;
+	mesh.visible = false;
 	// mesh.name = 'Cylinder ' + ( ++ meshCount );
 	var wireframe = new THREE.WireframeHelper( mesh, 0x00ff00 );
 	this.scene.add( wireframe );
-
+	this.scene.add( mesh );
 
 	// geometry = new THREE.BoxGeometry( 10, 20, 10, 2, 2, 2 );
 	// material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
@@ -145,10 +145,6 @@ var Editor = function () {
 
 	// // this.scene.add( object );
 	// this.scene.add( wireframe );
-
-
-	// Casing
-
 };
 
 Editor.prototype = {
