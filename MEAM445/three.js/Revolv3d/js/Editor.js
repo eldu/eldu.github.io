@@ -100,11 +100,11 @@ var Editor = function () {
 
 	// Default Lighting
 	var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-	directionalLight.position.set( 1, 1, 1);
+	directionalLight.position.set( 100, 100, 100);
 	this.scene.add( directionalLight );
 	
 	var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.5 );
-	directionalLight2.position.set( -1, -1, -1);
+	directionalLight2.position.set( -100, -100, -100);
 	this.scene.add( directionalLight2 );
 
 	// Default Line
@@ -121,14 +121,30 @@ var Editor = function () {
 	var line = new THREE.Line( geometry, material );
 	this.scene.add( line );
 
-	geometry = new THREE.BoxGeometry( 10, 20, 10, 2, 2, 2 );
-	material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-	object = new THREE.Mesh( geometry, material );
 
-	wireframe = new THREE.WireframeHelper( object, 0x00ff00 );
 
-	// this.scene.add( object );
+	var radiusTop = 8;
+	var radiusBottom = 8;
+	var height = 20;
+	var radiusSegments = 32;
+	var heightSegments = 1;
+	var openEnded = false;
+
+	geometry = new THREE.CylinderGeometry( radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded );
+	var mesh = new THREE.Mesh( geometry, new THREE.MeshStandardMaterial() );
+	// mesh.name = 'Cylinder ' + ( ++ meshCount );
+	var wireframe = new THREE.WireframeHelper( mesh, 0x00ff00 );
 	this.scene.add( wireframe );
+
+
+	// geometry = new THREE.BoxGeometry( 10, 20, 10, 2, 2, 2 );
+	// material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+	// object = new THREE.Mesh( geometry, material );
+
+	// wireframe = new THREE.WireframeHelper( object, 0x00ff00 );
+
+	// // this.scene.add( object );
+	// this.scene.add( wireframe );
 
 
 	// Casing
