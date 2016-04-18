@@ -8,9 +8,38 @@ Menubar.Logo = function ( editor ) {
 	container.setClass( 'menu' );
 
 	var title = new UI.Panel();
-	title.setClass( 'logo' );
+	title.setClass( 'title' );
 	title.setTextContent( 'Revolv3d' );
 	container.add( title );
+
+
+	// // instantiate a loader
+	// var loader = new THREE.ImageLoader();
+
+	// // load a image resource
+	// loader.load(
+	// 	// resource URL
+	// 	'TeamR3DLogo-2.png',
+	// 	// Function when resource is loaded
+	// 	function ( image ) {
+	// 		// do something with it
+
+	// 		// like drawing a part of it on a canvas
+	// 		var canvas = document.createElement( 'canvas' );
+	// 		// var canvas = container;
+	// 		var context = canvas.getContext( '2d' );
+	// 		context.drawImage( image, 100, 100 );
+	// 	},
+	// 	// Function called when download progresses
+	// 	function ( xhr ) {
+	// 		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	// 	},
+	// 	// Function called when download errors
+	// 	function ( xhr ) {
+	// 		console.log( 'An error happened' );
+	// 	}
+	// );
+
 	
 	// var options = new UI.Panel();
 	// options.setClass( 'options' );
