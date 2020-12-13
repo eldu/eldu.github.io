@@ -1,0 +1,30 @@
+{
+  "name": "eldu.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build",
+    "deploy": "gh-pages-deploy"
+  },
+  "gh-pages-deploy": {
+    "prep": [
+      "build"
+    ],
+    "noprompt": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldu/eldu.github.io.git"
+  },
+  "author": "Ellen Duong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eldu/eldu.github.io/issues"
+  },
+  "homepage": "https://github.com/eldu/eldu.github.io#readme",
+  "devDependencies": {
+    "gh-pages-deploy": "^0.5.1"
+  }
+}

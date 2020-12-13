@@ -1,1 +1,23 @@
-theme: jekyll-theme-cayman
+title: Ellen Duong
+author: Ellen Duong
+
+# Serving
+port: 4000
+
+exclude:
+  - .idea/
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTRUCTIONS.md
+  - README.md
+  - Spectral_README.txt
+  - credentials.json
+  - node_modules
+  - package-lock.json
+  - package.json
+  - requirements.txt
+  - token.pickle
+  - update_photos.py
+  - venv/
+  - webpack.config.js
