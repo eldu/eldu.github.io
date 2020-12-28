@@ -26,9 +26,9 @@ title: Projects
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					{% for item in site.data.navigation %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endfor %}
 				</ul>
 			</nav>
 

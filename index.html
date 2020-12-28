@@ -12,7 +12,7 @@ title: Home
 -->
 <html>
 	<head>
-		<title>{{ site.title }} | {{ page.title }}</title>
+		<title>{{ site.title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,10 +34,9 @@ title: Home
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="\">Home</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="thoughts.html">Thoughts</a></li>
-					<li><a href="about.html">About</a></li>
+					{% for item in site.data.navigation %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endfor %}
 				</ul>
 			</nav>
 
