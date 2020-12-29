@@ -4,6 +4,8 @@ author: Ellen Duong
 # Serving
 port: 4000
 
+excerpt_separator: <!-- more -->
+
 exclude:
   - .idea/
   - CONTRIBUTING.md
