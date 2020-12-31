@@ -2,6 +2,7 @@
 layout: post
 title: "Temporary Moments"
 category: project
+image: images/temporary_moments.jpg
 ---
 
 This project is a collection of photos of public art and community voices. Currently, this timeline tracks Seattle, WA from the stay at home order through the racial justice protests in 2020. I would like to expand this project to include public art from around the world.

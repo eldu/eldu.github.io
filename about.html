@@ -13,7 +13,13 @@ title: About
 		<title>{{ page.title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}" />
+
+		<!--		Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
+		<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
 	</head>
 	<body class="subpage">
 
@@ -48,7 +54,7 @@ title: About
 					<div class="box">
 						<div class="content">
 							<header class="align-center image fit">
-								<img src="images/profile.jpg" alt="" style="max-width: 800px"/>
+								<img src="images/profile.jpg" alt=""/>
 								<br/>
 								<h2>Hello! I'm Ellen</h2>
 							</header>
