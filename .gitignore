@@ -1,3 +1,5 @@
+_excludes/
+
 # Virtual Environment
 venv/
 
