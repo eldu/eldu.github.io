@@ -1,0 +1,110 @@
+---
+title: Thoughts
+
+---
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}" />
+
+		<!--		Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
+		<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Ellen Duong <span>{{ page.title }}</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					{% for item in site.data.navigation %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="one" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>{{ site.title }}</p>
+						<h2>{{ page.title }}</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+		<!-- One -->
+		<section id="two" class="wrapper style2">
+			<div class="inner">
+				<div class="grid-style">
+
+					{% for post in site.categories.blog %}
+					<div>
+						<div class="box">
+							{% if post.image %}
+							<div class="image fit">
+								<img src="{{ post.image }}" alt="{{ post.title }}" />
+							</div>
+							{% endif %}
+							<div class="content">
+								<header class="align-center">
+									<h2>{{ post.title }}</h2>
+								</header>
+								<p>{{ post.excerpt }}</p>
+								<footer class="align-center">
+									<a href="{{ post.url }}" class="button alt">Learn More</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						{% if site.data.social_media %}
+							{% assign sm = site.data.social_media %}
+							{% for entry in sm %}
+							{% assign key = entry | first %}
+							{% if sm[key].id %}
+						<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
+							{% endif %}
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; {{ site.author }}. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

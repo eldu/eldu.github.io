@@ -32,7 +32,7 @@
 <nav id="menu">
     <ul class="links">
         {% for item in site.data.navigation %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        <li><a href="{{ item.url | absolute_url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
 </nav>
@@ -41,7 +41,6 @@
 <section id="One" class="wrapper style3">
     <div class="inner">
         <header class="align-center">
-            <p>{{ site.title }}</p>
             <h2>{{ page.title }}</h2>
         </header>
     </div>
@@ -57,6 +56,9 @@
                     <img src="{{ page.image | absolute_url }}" alt=""/>
                     <br/>
                 </header>
+                {% endif %}
+                {% if page.author %}
+                <p>by {{ page.author }}</p>
                 {% endif %}
                 {{ content }}
             </div>
