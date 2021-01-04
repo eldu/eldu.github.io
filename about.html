@@ -1,106 +1,93 @@
 ---
 title: About
-
+image: /images/profile.jpg
 ---
 <!DOCTYPE HTML>
-<!--
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-	<head>
-		<title>{{ page.title }}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}" />
+<head>
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="{{ 'assets/css/main_story.css' | absolute_url }}" />
+	<link rel="stylesheet" href="{{ 'assets/css/noscript_story.css' | absolute_url }}" />
 
-		<!--		Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
-		<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
+	<!--		Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
+	<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5PZ0VP99T"></script>
-		<script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5PZ0VP99T"></script>
+	<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
 		  gtag('config', 'G-M5PZ0VP99T');
-		</script>
-	</head>
-	<body class="subpage">
+    </script>
+</head>
+<body class="subpage">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">Ellen Duong <span>{{ page.title }}</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
+<!-- Header -->
+<header id="header">
+	<div class="logo"><a href="index.html">Ellen Duong <span>{{ page.title }}</span></a></div>
+	<a href="#menu">Menu</a>
+</header>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					{% for item in site.data.navigation %}
-					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-					{% endfor %}
-				</ul>
-			</nav>
+<!-- Nav -->
+<nav id="menu">
+	<ul class="links">
+		{% for item in site.data.navigation %}
+		<li><a href="{{ item.url | absolute_url }}">{{ item.title }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
 
-		<!-- One -->
-			<section id="One" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>{{ site.title }}</p>
-						<h2>{{ page.title }}</h2>
-					</header>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-center image fit">
-								<img src="images/profile.jpg" alt=""/>
-								<br/>
-								<h2>Hello! I'm Ellen</h2>
-							</header>
-							{% capture about %}{% include about.md %}{% endcapture %}
-							<p>{{ about | markdownify }}</p>
-						</div>
-					</div>
-				</div>
-			</section>
+<!-- Wrapper -->
+<div id="wrapper" class="divided">
+	<!-- One -->
+	<section class="banner style3 orient-right content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+		<div class="content">
+			<h1>{{ site.title }}</h1>
+			<p class="major">							{% capture about %}{% include about.md %}{% endcapture %}
+			<p>{{ about | markdownify }}</p></p>
+		</div>
+		<div class="image">
+			<img src="{{ page.image | absolute_url }}" alt="" />
+		</div>
+	</section>
 
 		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						{% if site.data.social_media %}
-							{% assign sm = site.data.social_media %}
-							{% for entry in sm %}
-							{% assign key = entry | first %}
-							{% if sm[key].id %}
-						<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
-							{% endif %}
-							{% endfor %}
-						{% endif %}
-					</ul>
-				</div>
-				<div class="copyright">
-					&copy; {{ site.author }}. All rights reserved.
-				</div>
-			</footer>
+		<footer class="wrapper style1 align-center">
+			<div class="inner">
+				<ul class="icons">
+					{% if site.data.social_media %}
+					{% assign sm = site.data.social_media %}
+					{% for entry in sm %}
+					{% assign key = entry | first %}
+					{% if sm[key].id %}
+					<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon style2 {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
+					{% endif %}
+					{% endfor %}
+					{% endif %}
+				</ul>
+				<p>&copy; Ellen Duong. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</div>
+		</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</section>
+</div>
 
-	</body>
+<!-- Scripts -->
+<script src="{{ 'assets/js/jquery.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/jquery.scrollex.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/jquery.scrolly.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/skel.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/browser.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/breakpoints.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/util_story.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/main_story.js' | absolute_url }}"></script>
+
+</body>
 </html>

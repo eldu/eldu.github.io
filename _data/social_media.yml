@@ -1,17 +1,23 @@
-email:
-  id: 'shi.ellenduong@gmail.com'
-  href: 'mailto:'
-  title: 'Email'
-  fa-icon: 'fa-envelope-o'
+github:
+  id: 'eldu'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'brands fa-github'
+
+linkedin:
+  id: 'ellenduong'
+  href: 'https://www.linkedin.com/in/'
+  title: 'LinkedIn'
+  fa-icon: 'brands fa-linkedin'
 
 instagram:
   id: 'ellenelk'
   href: 'https://www.instagram.com/'
   title: 'Instagram'
-  fa-icon: 'fa-instagram'
+  fa-icon: 'brands fa-instagram'
 
-github:
-  id: 'eldu'
-  href: 'https://github.com/'
-  title: 'GitHub'
-  fa-icon: 'fa-github'
+email:
+  id: 'shi.ellenduong@gmail.com'
+  href: 'mailto:'
+  title: 'Email'
+  fa-icon: 'fa-envelope'

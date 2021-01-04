@@ -7,6 +7,8 @@
 (function($) {
 
 	var	$window = $(window),
+    $header 	= $('#header'),
+    $banner 	= $('.banner'),
 		$body = $('body'),
 		$wrapper = $('#wrapper');
 
@@ -98,6 +100,37 @@
 	// Smooth scroll.
 		$('.smooth-scroll').scrolly();
 		$('.smooth-scroll-middle').scrolly({ anchor: 'middle' });
+
+  // Menu.
+    $('#menu')
+      .append('<a href="#menu" class="close"></a>')
+      .appendTo($body)
+      .panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: 'right'
+      });
+
+  // Header.
+    if (skel.vars.IEVersion < 9)
+      $header.removeClass('alt');
+
+    if ($banner.length > 0
+    &&	$header.hasClass('alt')) {
+
+      $window.on('resize', function() { $window.trigger('scroll'); });
+
+      $banner.scrollex({
+        bottom:		$header.outerHeight(),
+        terminate:	function() { $header.removeClass('alt'); },
+        enter:		function() { $header.addClass('alt'); },
+        leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
+      });
+
+    }
 
 	// Wrapper.
 		$wrapper.children()
