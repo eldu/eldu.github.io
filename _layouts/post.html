@@ -51,6 +51,9 @@
 <section id="One" class="wrapper style3">
     <div class="inner">
         <header class="align-center">
+            {% if page.timeline %}
+            <p>{{ page.timeline }}</p>
+            {% endif %}
             <h2>{{ page.title }}</h2>
         </header>
     </div>
