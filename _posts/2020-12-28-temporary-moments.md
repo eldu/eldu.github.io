@@ -3,6 +3,7 @@ layout: post
 title: "Temporary Moments"
 category: project
 image: images/projects/temporary_moments/temporary_moments.jpg
+image_caption: "Artist: Jonathan Wakuda Fisher (<a href='https://www.instagram.com/wakudastudio/'>@wakudastudio</a>) Photo: Ellen Duong and Angela Schwartz"
 timeline: March 2020 - December 2020
 ---
 

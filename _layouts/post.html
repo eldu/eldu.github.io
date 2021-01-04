@@ -66,7 +66,12 @@
             <div class="content">
                 {% if page.image %}
                 <header class="align-center image fit">
-                    <img src="{{ page.image | absolute_url }}" alt=""/>
+                    <figure>
+                        <img src="{{ page.image | absolute_url }}" alt=""/>
+                        {% if page.image_caption %}
+                        <figcaption>{{ page.image_caption }}</figcaption>
+                        {% endif %}
+                    </figure>
                     <br/>
                 </header>
                 {% endif %}
