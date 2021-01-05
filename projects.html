@@ -1,119 +1,112 @@
 ---
 title: Projects
-
 ---
 <!DOCTYPE HTML>
 <!--
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>{{ page.title }}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}" />
+<head>
+	<title>{{ site.title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main_story.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript_story.css" /></noscript>
 
-		<!--		Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
-		<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | absolute_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | absolute_url }}">
+	<link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | absolute_url }}">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5PZ0VP99T"></script>
-		<script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5PZ0VP99T"></script>
+	<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
 		  gtag('config', 'G-M5PZ0VP99T');
 		</script>
-	</head>
-	<body class="subpage">
+</head>
+<body class="is-preload">
+<!-- Header -->
+<header id="header" class="alt">
+	<div class="logo"><a href="index.html">{{ site.title }} <span>{{ page.title }}</span></a></div>
+	<a href="#menu">Menu</a>
+</header>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">Ellen Duong <span>{{ page.title }}</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
+<!-- Nav -->
+<nav id="menu">
+	<ul class="links">
+		{% for item in site.data.navigation %}
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					{% for item in site.data.navigation %}
-					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-					{% endfor %}
-				</ul>
-			</nav>
+<!-- Wrapper -->
+<div id="wrapper" class="divided">
+	<!-- One -->
+	<section class="banner style2 invert orient-left content-align-left image-position-right onload-image-fade-in onload-content-fade-right">
+		<div class="content">
+			<h1>{{ page.title }}</h1>
+			<p class="major"></p>
+		</div>
+		<div class="image">
+			<img src="/images/header.jpg" alt="" />
+		</div>
+	</section>
 
-		<!-- One -->
-			<section id="one" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>{{ site.title }}</p>
-						<h2>{{ page.title }}</h2>
-					</header>
-				</div>
-			</section>
-
-		<!-- Two -->
-		<section id="two" class="wrapper style2">
-			<div class="inner">
-				<div class="grid-style">
-
-					{% for post in site.categories.project %}
-					<div>
-						<div class="box">
-							{% if post.image %}
-							<div class="image fit">
-								<img src="{{ post.image }}" alt="{{ post.title }}" />
-							</div>
-							{% endif %}
-							<div class="content">
-								<header class="align-center">
-									<h2>{{ post.title }}</h2>
-								</header>
-								<p>{{ post.excerpt }}</p>
-								<footer class="align-center">
-									<a href="{{ post.url }}" class="button alt">Learn More</a>
-								</footer>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						{% if site.data.social_media %}
-							{% assign sm = site.data.social_media %}
-							{% for entry in sm %}
-							{% assign key = entry | first %}
-							{% if sm[key].id %}
-						<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
-							{% endif %}
-							{% endfor %}
-						{% endif %}
+	<!-- Six -->
+	<section class="wrapper style2 align-center">
+		<div class="inner">
+			<div class="items style3 medium onscroll-fade-in">
+				{% for post in site.categories.project %}
+				<section>
+					<span class="image fit"><img src="{{ post.image }}" alt="{{ post.title }}" /></span>
+					<h3>{{ post.title }}</h3>
+					<p>{{ post.excerpt | truncatewords: 30, "..." }}</p>
+					<ul class="actions stacked">
+						<li><a href="{{ post.url }}" class="button small">Read More</a></li>
 					</ul>
-				</div>
-				<div class="copyright">
-					&copy; {{ site.author }}. All rights reserved.
-				</div>
-			</footer>
+				</section>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Footer -->
+	<footer class="wrapper style1 align-center">
+		<div class="inner">
+			<ul class="icons">
+				{% if site.data.social_media %}
+				{% assign sm = site.data.social_media %}
+				{% for entry in sm %}
+				{% assign key = entry | first %}
+				{% if sm[key].id %}
+				<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon style2 {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</ul>
+			<p>&copy; Ellen Duong. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</div>
+	</footer>
 
-	</body>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util_story.js"></script>
+<script src="assets/js/main_story.js"></script>
+
+</body>
 </html>

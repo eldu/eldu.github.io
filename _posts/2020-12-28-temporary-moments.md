@@ -1,5 +1,5 @@
 ---
-layout: post_story
+layout: post
 title: "Temporary Moments"
 category: project
 image: images/projects/temporary_moments/temporary_moments.jpg
