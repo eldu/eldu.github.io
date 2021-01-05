@@ -13,8 +13,8 @@ title: Home
 		<title>{{ site.title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main_story.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript_story.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
@@ -79,6 +79,10 @@ title: Home
 						<div class="image">
 							<img src="{{ post.image }}" alt="{{ post.title }}" />
 						</div>
+						{% else %}
+						<div class="image">
+							<img src="{{ post.thumbnail }}" alt="{{ post.title }}" />
+						</div>
 						{% endif %}
 					</section>
 				{% endfor %}
@@ -107,8 +111,8 @@ title: Home
 							<div class="gallery style2 medium lightbox onscroll-fade-in">
 								{% for post in site.posts %}
 								<article>
-									<a href="{{ post.image }}" class="image">
-										<img src="{{ post.image }}" alt="" />
+									<a href="{{ post.thumbnail }}" class="image">
+										<img src="{{ post.thumbnail }}" alt="" />
 									</a>
 									<div class="caption">
 										<h3>{{ post.title }}</h3>
@@ -149,8 +153,8 @@ title: Home
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util_story.js"></script>
-			<script src="assets/js/main_story.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

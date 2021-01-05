@@ -12,8 +12,8 @@ title: Thoughts
 	<title>{{ site.title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main_story.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript_story.css" /></noscript>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
@@ -66,8 +66,8 @@ title: Thoughts
 			<div class="items style3 medium onscroll-fade-in">
 				{% for post in site.categories.blog %}
 				<section>
-					<span class="image fit"><img src="{{ post.image }}" alt="{{ post.title }}" /></span>
-					<h3>{{ post.title }}</h3>
+					<a href="{{ post.url }}"><span class="image fit"><img src="{{ post.thumbnail }}" alt="{{ post.title }}" /></span></a>
+					<a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
 					<p>{{ post.excerpt | truncatewords: 50, "..." }}</p>
 					<ul class="actions stacked">
 						<li><a href="{{ post.url }}" class="button small">Read More</a></li>
@@ -105,8 +105,8 @@ title: Thoughts
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util_story.js"></script>
-<script src="assets/js/main_story.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
