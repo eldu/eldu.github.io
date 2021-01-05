@@ -13,8 +13,8 @@ title: Home
 		<title>{{ site.title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}" />
+		<noscript><link rel="stylesheet" href="{{ 'assets/css/noscript.css' | absolute_url }}" /></noscript>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
@@ -35,7 +35,7 @@ title: Home
 	<body class="is-preload">
 		<!-- Header -->
 		<header id="header" class="alt">
-			<div class="logo"><a href="index.html">{{ site.title }} <span>{{ page.title }}</span></a></div>
+			<div class="logo"><a href="{{ 'index.html' | absolute_url }}">{{ site.title }} <span>{{ page.title }}</span></a></div>
 			<a href="#menu">Menu</a>
 		</header>
 
@@ -147,14 +147,14 @@ title: Home
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ 'assets/js/jquery.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/jquery.scrollex.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/jquery.scrolly.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/skel.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/browser.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/breakpoints.min.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/util.js' | absolute_url }}"></script>
+			<script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
 
 	</body>
 </html>
