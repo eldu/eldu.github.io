@@ -1,6 +1,5 @@
 # Ellen Duong
 
 ## Resources
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+- [Story by HTML5UP](https://html5up.net/story)
+- [Hielo by TEMPLATED](https://templated.co/hielo)
