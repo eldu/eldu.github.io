@@ -29,3 +29,8 @@ In the beginning of 2020, COVID-19 thrusted the world into panic and quarantine.
 
 ### Check us out!
 Take a look at our website, [Temporary Moments](https://www.temporarymoments.com/). Follow us on Instagram [@thesetemporarymoments](https://www.instagram.com/thesetemporarymoments/) where extras and behind the scenes photos will be posted. 
+
+<ul class="actions stacked align-center">
+    <li><a href="https://www.temporarymoments.com/" class="button large wide smooth-scroll-middle">View Website</a></li>
+    <li><a href="https://www.instagram.com/thesetemporarymoments/" class="button large wide smooth-scroll-middle">@thesetemporarymoments</a></li>
+</ul>
