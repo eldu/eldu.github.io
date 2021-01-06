@@ -7431,6 +7431,7 @@ figcaption {
 			overflow-y: hidden;
 			position: relative;
 			width: 100%;
+			max-height: 360px;
 		}
 
 		.gallery.style2 article {
@@ -7445,19 +7446,23 @@ figcaption {
 			display: block;
 			position: relative;
 			overflow: hidden;
-			width: 22.5rem;
-			max-width: 75vw;
+			/* width: 22.5rem; */
+			max-width: 22.5rem;
+			max-height: 16.5rem; /* match with .gallery.style2 article .image img */
+			/* max-width: 75vw; */
 		}
 
 			.gallery.style2 article .image {
 				display: block;
-				width: 100%;
+				max-width: 100%;
+				max-height: 100%;
 				border-radius: 0;
 			}
 
 				.gallery.style2 article .image img {
 					display: block;
-					width: 100%;
+					max-width: 100%;
+					max-height: 16.5rem;
 					border-radius: 0;
 				}
 
