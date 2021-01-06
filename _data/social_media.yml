@@ -10,6 +10,12 @@ linkedin:
   title: 'LinkedIn'
   fa-icon: 'brands fa-linkedin'
 
+vimeo:
+  id: 'ellenduong'
+  href: 'https://vimeo.com/'
+  title: 'Vimeo'
+  fa-icon: 'brands fa-vimeo'
+
 instagram:
   id: 'ellenelk'
   href: 'https://www.instagram.com/'

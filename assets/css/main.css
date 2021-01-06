@@ -189,7 +189,7 @@ figcaption {
 	}
 
 	p {
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 		p.major {
@@ -2484,6 +2484,19 @@ figcaption {
 			width: 100%;
 		}
 
+    input[type="submit"].tag,
+    input[type="reset"].tag,
+    input[type="button"].tag,
+    button.tag,
+    .button.tag {
+      pointer-events: none;
+      font-size: 0.6rem;
+      height: 2em;
+      line-height: 2em;
+      border-radius: 2em;
+      padding: 0 1em;
+    }
+
 		input[type="submit"].small,
 		input[type="reset"].small,
 		input[type="button"].small,
@@ -3042,7 +3055,7 @@ figcaption {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 		padding-left: 1rem;
 	}
 
