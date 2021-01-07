@@ -1,3 +1,7 @@
+---
+layout: stylesheet
+---
+
 @import url(fontawesome-all.min.css);
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
@@ -8660,7 +8664,7 @@ figcaption {
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		margin: 3rem 0;
+		/* margin: 3rem 0; */
 		position: relative;
 	}
 
@@ -9202,3 +9206,52 @@ figcaption {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+}
+
+/* Front Page Banner Optimize for Various Screen Sizes */
+#frontpage-banner {
+  background-position: right center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; background-size: cover;
+}
+
+@media (max-width: 480px) {
+    #frontpage-banner {
+        background-image: url(../../images/background-mobile.jpg);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    #frontpage-banner {
+        background-image: url(../../images/background-mobile.jpg);
+    }
+}
+
+@media (min-width: 720px) {
+   #frontpage-banner {
+	      background-image: url(../../images/background-desktop.jpg);
+   }
+}

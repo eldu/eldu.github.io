@@ -5,18 +5,15 @@ author: Ellen Duong
 port: 4000
 
 excerpt_separator: <!-- more -->
+sass:
+  style: compressed
 
 exclude:
   - .idea/
-  - CONTRIBUTING.md
   - Gemfile
   - Gemfile.lock
-  - INSTRUCTIONS.md
   - README.md
   - node_modules
   - package-lock.json
   - package.json
-  - requirements.txt
-  - venv/
-  - webpack.config.js
   - _excludes/
