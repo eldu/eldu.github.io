@@ -31,6 +31,8 @@ More complicated SDFs include constructive geometry wherein we can intersect, su
 
 ### Shaders
 
+Shaders are used to generate appropriate levels of light, darkness, and color for 3D scenes. In the following demo, I implemented lambert, toon, and iridescent shaders. I also implemented the following post-processed effects: greyscale, pointillism, gaussian, bloom, hatching, vignette, and linear.
+
 <ul class="actions align-center">
     <li><a href="https://eldu.github.io/Project5-Shaders/" class="button medium">Live Demo</a></li>
     <li><a href="https://github.com/eldu/Project5-Shaders" class="button medium">View on Github</a></li>
@@ -38,12 +40,16 @@ More complicated SDFs include constructive geometry wherein we can intersect, su
 
 ### Shape Grammar
 
+A procedurally generated city starts with shapes and grammar for how those shapes fit together. Cities of any size can be generated using this syntax. The following is a simplified version of a procedurally generated city.
+
 <ul class="actions align-center">
     <li><a href="https://eldu.github.io/Project4-Shape-Grammar/" class="button medium">Live Demo</a></li>
     <li><a href="https://github.com/eldu/Project4-Shape-Grammar" class="button medium">View on Github</a></li>
 </ul>
 
 ### L-System
+
+Similarly, the L-system is a way to generate trees at the rendering stage using symbols and an initial axiom.
 
 <ul class="actions align-center">
     <li><a href="https://eldu.github.io/Project3-LSystems/" class="button medium">Live Demo</a></li>
@@ -68,7 +74,6 @@ Perlin noise is a multi-octave noise algorithm that produces a seamless texture.
     <li><a href="https://eldu.github.io/Project1-Noise/" class="button medium">Live Demo</a></li>
     <li><a href="https://github.com/eldu/Project1-Noise" class="button medium">View on Github</a></li>
 </ul>
-
 
 *For CIS 700: Special Topics in Procedural Graphics, Spring 2017*
 
