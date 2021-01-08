@@ -9230,28 +9230,3 @@ figcaption {
 		animation: none !important;
 	}
 }
-
-/* Front Page Banner Optimize for Various Screen Sizes */
-#frontpage-banner {
-  background-position: right center;
-  background-attachment: fixed;
-  background-repeat: no-repeat; background-size: cover;
-}
-
-@media (max-width: 480px) {
-    #frontpage-banner {
-        background-image: url(../../images/background-mobile.jpg);
-    }
-}
-
-@media (min-width: 481px) and (max-width: 1024px) {
-    #frontpage-banner {
-        background-image: url(../../images/background-mobile.jpg);
-    }
-}
-
-@media (min-width: 720px) {
-   #frontpage-banner {
-	      background-image: url(../../images/background-desktop.jpg);
-   }
-}
