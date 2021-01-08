@@ -1,5 +1,7 @@
 ---
 title: Home
+description: Hello! I'm Ellen
+image: images/background-mobile.jpg
 ---
 
 <!DOCTYPE HTML>
@@ -17,6 +19,26 @@ title: Home
 		<link rel="preload" href="{{ 'assets/css/fontawesome-all.min.css' | absolute_url }}" />
 		<link rel="preload" href="{{ 'assets/css/font-awesome.min.css' | absolute_url }}" />
 		<noscript><link rel="stylesheet" href="{{ 'assets/css/noscript.css' | absolute_url }}" /></noscript>
+
+		<!-- Search Engine -->
+		<meta name="description" content="{{ page.description }}">
+		<meta name="image" content="{{ page.image }}">
+		<!-- Schema.org for Google -->
+		<meta itemprop="name" content="{{ page.title }}">
+		<meta itemprop="description" content="{{ page.description }}">
+		<meta itemprop="image" content="{{ page.image }}">
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:image:src" content="{{ page.image }}">
+		<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+		<meta name="og:title" content="{{ page.title }}">
+		<meta name="og:description" content="{{ page.description }}">
+		<meta name="og:image" content="{{ page.image }}">
+		<meta name="og:url" content="{{ page.website_url }}">
+		<meta name="og:site_name" content="{{ page.title }}">
+		<meta name="og:type" content="website">
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | absolute_url }}">
