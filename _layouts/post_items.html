@@ -46,7 +46,7 @@
 <!-- Wrapper -->
 <div id="wrapper" class="divided">
 
-    <section class="wrapper style2 align-left">
+    <section class="wrapper style1 align-left">
         <div class="inner">
             <header class="align-center">
                 <figure class="image fit">
@@ -68,14 +68,32 @@
         </div>
     </section>
 
-    {% if page.gallery %}
+    {%- if page.items -%}
+    {%- for item in page.items -%}
+    <section class="spotlight style6 orient-left content-align-left image-position-center onscroll-image-fade-in">
+        <div class="content">
+            {%- if item.url -%}
+            <a href="{{ item.url }}"><h2>{{ item.title }}</h2></a>
+            {%- else -%}
+            <h2>{{ item.title }}</h2>
+            {%- endif -%}
+            <p>{{ item.description }}</p>
+        </div>
+        <div class="image">
+            <img src="{{ item.image | absolute_url }}" alt="" />
+        </div>
+    </section>
+    {%- endfor -%}
+    {%- endif -%}
+
+    {%- if page.gallery -%}
     <!-- Gallery -->
     <section class="wrapper style1 align-center">
         <div class="inner">
             <h2>Gallery</h2>
         </div>
         <div class="gallery style2 medium lightbox onscroll-fade-in">
-            {% for item in page.gallery %}
+            {%- for item in page.gallery -%}
             <article>
                 <a href="{{ item.src }}" class="image">
                     <img src="{{ item.src }}" alt="" />
@@ -88,10 +106,10 @@
 <!--                        </ul>-->
                 </div>
             </article>
-            {% endfor %}
+            {%- endfor -%}
         </div>
     </section>
-    {% endif %}
+    {%- endif -%}
 
         <!-- Footer -->
         <footer class="wrapper style1 align-center">

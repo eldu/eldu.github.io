@@ -50,33 +50,32 @@ image: /images/profile.jpg
 	<section class="banner style3 orient-right content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 		<div class="content">
 			<h1>{{ site.title }}</h1>
-			<p class="major">							{% capture about %}{% include about.md %}{% endcapture %}
-			<p>{{ about | markdownify }}</p></p>
+			<p class="major"></p>
+			{%- capture about %}{% include about.md %}{% endcapture -%}
+			<p>{{ about | markdownify }}</p>
 		</div>
 		<div class="image">
 			<img src="{{ page.image | absolute_url }}" alt="" />
 		</div>
 	</section>
 
-		<!-- Footer -->
-		<footer class="wrapper style1 align-center">
-			<div class="inner">
-				<ul class="icons">
-					{% if site.data.social_media %}
-					{% assign sm = site.data.social_media %}
-					{% for entry in sm %}
-					{% assign key = entry | first %}
-					{% if sm[key].id %}
-					<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon style2 {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
-					{% endif %}
-					{% endfor %}
-					{% endif %}
-				</ul>
-				<p>&copy; Ellen Duong. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-			</div>
-		</footer>
-
-	</section>
+	<!-- Footer -->
+	<footer class="wrapper style1 align-center">
+		<div class="inner">
+			<ul class="icons">
+				{% if site.data.social_media %}
+				{% assign sm = site.data.social_media %}
+				{% for entry in sm %}
+				{% assign key = entry | first %}
+				{% if sm[key].id %}
+				<li><a href="{{ sm[key].href }}{{ sm[key].id }}" class="icon style2 {{ sm[key].fa-icon }}"><span class="label">{{ sm[key].title }}</span></a></li>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</ul>
+			<p>&copy; Ellen Duong. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</div>
+	</footer>
 </div>
 
 <!-- Scripts -->
