@@ -17,7 +17,7 @@ Processing is a flexible software sketchbook and a language for learning how to 
 
 <!-- more -->
 
-I led 2-part workshops to teach artists and first-time programmers to create a design in Processing that they would tun into a wearable artwork. 
+I led 2-part workshops to teach artists and first-time programmers to create a design in Processing that they would turn into a wearable artwork. 
 
 ### Slides
 - [Part A: Processing Unique methods/style, creating shapes and shape properties, conditionals and loops](https://docs.google.com/presentation/d/1Tu_Hzh7dqmvqsk_4U5XOG6AM3HeP-B4T4SI7wARe18g/edit?usp=sharing)
