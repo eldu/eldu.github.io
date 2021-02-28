@@ -3,8 +3,8 @@ layout: post
 title: Procedural Textures
 category: project
 author: Ellen Duong
-thumbnail: images/spotlight01.jpg
-image: images/spotlight01.jpg
+thumbnail: images/projects/procedural_textures.jpg
+image: images/projects/procedural_textures.jpg
 ---
 
 A procedural texture is a texture generated with a fixed set of parameters. Substance Designer is an application to create these textures in a node-based interface. The following are some textures I have made.

@@ -3,8 +3,8 @@ layout: post
 title: Procedural Graphics
 category: project
 author: Ellen Duong
-thumbnail: images/spotlight01.jpg
-image: images/spotlight01.jpg
+thumbnail: images/projects/procedural_graphics.jpg
+image: images/projects/procedural_graphics.jpg
 ---
 Procedural generation is creating a process to create a thing. With basic shapes and general principles for how they fit together, forests and cities can easily be generated. The following are projects from CIS 700: Special Topics in Procedural Graphics, Spring 2017. I was a teaching assistant for this graduate level computer science course in Spring 2018.
 
