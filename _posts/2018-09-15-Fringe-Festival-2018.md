@@ -3,8 +3,8 @@ layout: post
 title: Fringe Festival 2018 - Color
 category: project
 author: Ellen Duong
-thumbnail: images/spotlight01.jpg
-image: images/spotlight01.jpg
+thumbnail: /images/projects/fringe_festival_2018.jpg
+image: /images/projects/fringe_festival_2018.jpg
 ---
 
 Color is an interactive watercolor effect, non-photorealistic renderer that displays a 3D scene as if it were a watercolor painting with interactive artistic UI tools.
