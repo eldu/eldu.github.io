@@ -9,21 +9,3 @@ linkedin:
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
   fa-icon: 'brands fa-linkedin'
-
-vimeo:
-  id: 'ellenduong'
-  href: 'https://vimeo.com/'
-  title: 'Vimeo'
-  fa-icon: 'brands fa-vimeo'
-
-instagram:
-  id: 'ephemera.elle'
-  href: 'https://www.instagram.com/'
-  title: 'Instagram'
-  fa-icon: 'brands fa-instagram'
-
-email:
-  id: 'shi.ellenduong@gmail.com'
-  href: 'mailto:'
-  title: 'Email'
-  fa-icon: 'fa-envelope'
