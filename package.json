@@ -26,7 +26,7 @@
   "homepage": "https://github.com/eldu/eldu.github.io#readme",
   "devDependencies": {
     "gh-pages-deploy": "^0.5.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "npm-cli": "^0.1.0",
     "npm-lifecycle": "^3.1.5",
     "npm-run-all": "^4.1.5"
